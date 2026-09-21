@@ -29,7 +29,10 @@ public class BST {
 
 
     public boolean isEmpty() {
-        return false; // TODO implement me!
+        if (this.root == null) {
+            return true;
+        }
+        return false;
     }
 
     public boolean contains(int item) {
@@ -47,7 +50,17 @@ public class BST {
 
 
     public void insert(int item) {
-
+        if (this.isEmpty()) {
+            this.root = item;
+            this.left = new BST();
+            this.right = new BST();
+        }
+        else if (item <= this.root){
+            this.left.insert(item);
+        }
+        else {
+            this.right.insert(item);
+        }
     }
 
 
