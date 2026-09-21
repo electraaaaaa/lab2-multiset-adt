@@ -23,7 +23,7 @@ public class ArrayListMultiSet extends MultiSet {
      */
     @Override
     void remove(int item) {
-
+        this.lst.remove(item);
     }
 
     /**
@@ -34,7 +34,7 @@ public class ArrayListMultiSet extends MultiSet {
      */
     @Override
     boolean contains(int item) {
-        return false;
+        return this.lst.contains(item);
     }
 
     /**
